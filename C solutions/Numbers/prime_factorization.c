@@ -4,18 +4,20 @@
 void factorize(int n) {
   int d = 2;
   int i;
-  int fm = 0;
+
+  // Counts how many times the number is divided by the current prime factor
+  int quotient = 0;
 
   printf("%d's prime factors are: ", n);
   while (n > 1) {
     if (n % d == 0) {
       n /= d;
-      fm++;
+      quotient++;
     } else {
-      if (fm != 0) {
+      if (quotient != 0) {
         printf("%d ", d);
       }
-      fm = 0;
+      quotient = 0;
       d++;
     }
   }
