@@ -25,12 +25,12 @@ int main(int argc, char *argv[]) {
   char user_input = 'Y';
 
   while (user_input != 'N' && user_input != 'n') {
-    printf("Show the next prime? (Y/N): ");
+    printf("Show the next prime? (Y/N):");
     scanf(" %c", &user_input);
-    // if (user_input == 'Y' || user_input == 'y') {
+    if (user_input == 'Y' || user_input == 'y') {
       printf("%s%d\n\n", "The next prime number is ", current_prime);
       current_prime = get_next_prime(current_prime);
-    // }
+    }
   }
   printf("Bye :) \n");
 
